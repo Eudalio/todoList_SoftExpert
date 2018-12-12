@@ -6,7 +6,8 @@ export function registerEventHandlers() {
     listen('click', '#addTodo', event => {
         const todoInput = document.getElementById('todoInput');
         todos.dispatch(addTodo(todoInput.value));
-        event.stopPropagation();
+		event.stopPropagation();
+		document.getElementById('todoInput').focus();
     });
 
     listen('keypress', '#todoInput', event => {

@@ -14,7 +14,8 @@ export function registerEventHandlers() {
             event.preventDefault();
             const todoInput = document.getElementById('todoInput');
             todos.dispatch(addTodo(todoInput.value));
-            event.stopPropagation();
+			event.stopPropagation();
+			document.getElementById('todoInput').focus();
         }
     })
 
